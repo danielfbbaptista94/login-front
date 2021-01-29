@@ -1,0 +1,22 @@
+
+
+.card-login {
+  height: 150vh;
+  max-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-login-header, .card-login-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.mat-form-field {
+  display: inline !important;
+  position: relative;
+  text-align: left;
+}

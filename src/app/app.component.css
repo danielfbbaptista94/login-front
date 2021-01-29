@@ -1,0 +1,12 @@
+
+.headerClass {
+  margin-bottom: 2%;
+}
+
+.bodyClass {
+  margin: 2% 5% 2% 5%;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
