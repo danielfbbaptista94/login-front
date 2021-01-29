@@ -1,1 +1,77 @@
-<p>register works!</p>
+
+<form class="register-form" [formGroup]="registerForm">
+  <div class="card-register">
+    <mat-card style="width: 60%; margin-top: 5%;">
+      <mat-card-header class="card-register-header">
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content class="card-register-content">
+
+        <div>
+          <mat-form-field floatLabel="always">
+            <mat-label>Name</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="Name"
+              required
+              formControlName="name"
+              [(ngModel)]="user.name"
+            />
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field floatLabel="always">
+            <mat-label>E-mail</mat-label>
+            <input
+              matInput
+              type="email"
+              placeholder="E-mail"
+              required
+              formControlName="email"
+              [(ngModel)]="user.email"
+            />
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field floatLabel="always">
+            <mat-label>Username</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="Username"
+              required
+              formControlName="username"
+              [(ngModel)]="user.username"
+            />
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field floatLabel="always">
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              type="password"
+              placeholder="Password"
+              required
+              formControlName="password"
+              [(ngModel)]="user.password"
+            />
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions class="card-register-buttons">
+        <button
+          mat-button
+          (click)="register()"
+        >Register</button>
+      </mat-card-actions>
+
+    </mat-card>
+  </div>
+</form>
