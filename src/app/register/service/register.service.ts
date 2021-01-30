@@ -13,6 +13,6 @@ export class RegisterService {
   constructor(private http:HttpClient) { }
 
   register(userIn: User) {
-    return this.http.post(API_URL + '/register', userIn, { observe: 'response' });
+    return this.http.post(API_URL + '/auth/register', userIn, { observe: 'response' });
   }
 }

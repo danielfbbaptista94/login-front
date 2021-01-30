@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
 import { ToastrService } from 'ngx-toastr';
 import { User } from './model/user';
 import { RegisterService } from './service/register.service';
@@ -17,7 +19,8 @@ export class RegisterComponent implements OnInit {
   constructor(
     private registerService: RegisterService,
     private formBuilder: FormBuilder,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -50,6 +53,7 @@ export class RegisterComponent implements OnInit {
       .register(this.user)
       .subscribe(
         (success) => {
+          this.router.navigate(['/login']);
           this.toastr.success("Success", "User register with success !", {
             timeOut: 5000
           });
