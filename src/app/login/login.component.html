@@ -1,6 +1,6 @@
 
 
-<form class="login-form">
+<form class="login-form" [formGroup]="loginForm">
   <div class="card-login">
     <mat-card style="width: 30%;">
       <mat-card-header class="card-login-header">
@@ -12,21 +12,44 @@
         <div>
           <mat-form-field floatLabel="always">
             <mat-label>Username</mat-label>
-            <input matInput type="text" placeholder="Username" required/>
+            <input
+              matInput type="text"
+              placeholder="Username"
+              required
+              formControlName="username"
+              [(ngModel)]="loginDTO.username"
+            />
           </mat-form-field>
         </div>
 
         <div>
           <mat-form-field floatLabel="always">
             <mat-label>Password</mat-label>
-            <input matInput type="password" placeholder="Password" required/>
+            <input
+              matInput
+              type="password"
+              placeholder="Password"
+              required
+              formControlName="password"
+              [(ngModel)]="loginDTO.password"
+            />
           </mat-form-field>
         </div>
       </mat-card-content>
 
       <mat-card-actions class="card-login-buttons">
-        <button mat-button>Login</button>
-        <button mat-button>Register</button>
+        <button
+          mat-raised-button
+          class="buttonLogin"
+          color="primary"
+          (click)="login()"
+        >Login</button>
+        <button
+          mat-raised-button
+          class="buttonRegister"
+          color="accent"
+          (click)="goToRegister()"
+        >Register</button>
       </mat-card-actions>
 
     </mat-card>

@@ -20,3 +20,9 @@
   position: relative;
   text-align: left;
 }
+
+.buttonRegister {
+  width: 80%;
+  height: 40px;
+  font-size: 20px;
+}
